@@ -24,7 +24,7 @@
     --space-3: 2rem; /* 32px */
 
     --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgba(54, 48, 41, 0.2);
-    --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgba(255, 255, 255, 0.5);
+    --shadow-light: 0 0.1rem 0.2rem 0.1rem rgba(255, 255, 255, 0.5);
 
 }
 
@@ -106,6 +106,9 @@ h1, h2, h3, h4, h5, h6 {
 .text-dark { color: var(--dark); }
 .text-muted { color: var(--muted); }
 
+.shadow-dark {box-shadow: var(--shadow-dark);}
+.shadow-light {box-shadow: var(--shadow-light);}
+
 /********************************** COMPONENTS **********************************/
 .product-image {
     position: relative;
@@ -136,8 +139,27 @@ h1, h2, h3, h4, h5, h6 {
     left:var(--space-2);
 }
 
+.tags {
+    display: flex;
+    gap: var(--space-1);
+    list-style: none;
+}
+
+.tags .tag-item {
+    background-color: var(--primary);
+    color: var(--light);
+    text-decoration: none;
+
+    border-radius: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+}
 
 /********************************** LAYOUT **********************************/
+.container {
+    max-width: 1280px;
+    margin:var(--space-1) auto var(--space-0);
+}
+
 .d-flex { display: flex;}
 
 .flex-between { justify-content: space-between;}
