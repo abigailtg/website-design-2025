@@ -1,0 +1,187 @@
+/* Imports the google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+    --primary: #000043;
+    --primary-tint: #131367;
+    --primary-shade: #000025;
+
+    --secondary: #e4572e;
+    --secondary-tint: #e97555;
+    --secondary-shade: #a33315;
+    
+    --light: #ffffff;
+    --dark: #00000D;
+
+    --muted: #E1E1E1;
+    --muted-tint: #fafafa;
+    --muted-shade: #bbbbbb;
+
+    --font-normal: 'Source Sans 3', Arial, sans-serif;
+    --font-heading: 'Montserrat', serif;
+
+    --space-0: 0;  /* 0px */
+    --space-1: 0.5rem; /* 8px */
+    --space-2: 1rem; /* 16px */
+    --space-3: 2rem; /* 32px */ 
+
+    --shadow-dark: 0 0.1rem 0.2rem 0.1rem rgba(54, 48, 41, 0.2);
+    --shadow-light: 0 0.1rem 0.2rem 0.1rem rgba(255, 255, 255, 0.5);
+}
+
+*{
+    box-sizing:border-box;
+    /* will force elements to scale from the border instead */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-normal);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+
+ .site-header {
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo img {
+    height: 64px;  
+    width: auto;
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav a {
+    color: var(--light);
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Buttons */
+.header-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1.2rem;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Light button */
+.btn-light {
+    background-color: var(--light);
+    color: var(--primary);
+}
+
+/* Outline button */
+.btn-outline {
+    border: 1px solid var(--light);
+    color: var(--light);
+    background: transparent;
+}
+
+.hero {
+    background-image: url(assets/mA-scaled.jpg);  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+
+    padding: 4rem 2.5rem;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #00000059;
+}
+
+.hero-content {
+    position: relative;
+    max-width: 600px;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+
+    background: white;
+    border-radius: 999px;
+    overflow: hidden;
+
+    max-width: 480px;
+    box-shadow: var(--shadow-dark);
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    font-family: var(--font-normal);
+}
+
+.search-bar input:focus {
+    outline: none;
+}
+
+.search-bar button {
+    border: none;
+    background: transparent;
+    padding: 0 1.25rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero {
+        padding: 3rem 1.5rem;
+    }
+}
