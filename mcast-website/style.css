@@ -297,7 +297,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .why-mcast {
     background-image: url("assets/why-choose-mcast.jpg");
-    background-size: 100% auto;      /* shows full height */
+    background-size: 100% auto;       
     background-repeat: no-repeat;
     background-position: top center;
     position: relative;
@@ -305,11 +305,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
  
-
-
-
 .why-overlay {
-    background: rgba(0, 0, 67, 0.75); /* matches your primary colour */
+    background: rgba(0, 0, 67, 0.75);  
     padding: 5rem 2.5rem;
 }
 
@@ -413,4 +410,34 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+.page-hero {
+    background: var(--primary);
+    color: white;
+    padding: 5rem 2.5rem;
+    text-align: center;
+}
+
+.courses-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 4rem 2.5rem;
+}
+
+.course-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-dark);
+}
+
+.course-card h3 {
+    font-family: var(--font-heading);
+    margin-bottom: 0.5rem;
+}
+
+.course-card span {
+    color: var(--secondary);
+    font-weight: 600;
+}
 
