@@ -417,27 +417,57 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
-.courses-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 4rem 2.5rem;
-}
-
 .course-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: var(--shadow-dark);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #000043, #131367);
+  padding: 1.5rem 2rem;
+  border-radius: 1.2rem;
+  margin-bottom: 1rem;
+  color: white;
 }
 
-.course-card h3 {
-    font-family: var(--font-heading);
-    margin-bottom: 0.5rem;
+.course-left {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
 }
 
-.course-card span {
-    color: var(--secondary);
-    font-weight: 600;
+.course-icon {
+  width: 50px;
+  height: 50px;
 }
+
+.tags span {
+  background: white;
+  color: #000043;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.6rem;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+}
+
+.course-actions {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.btn-apply {
+  background: var(--secondary);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  color: white;
+  font-weight: 600;
+}
+
+.btn-light {
+  background: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  color: #000043;
+}
+
 

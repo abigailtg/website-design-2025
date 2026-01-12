@@ -6,6 +6,29 @@
     <title>Courses & Entry Requirements</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+<script>
+const levelFilter = document.getElementById("levelFilter");
+const instituteFilter = document.getElementById("instituteFilter");
+const courses = document.querySelectorAll(".course-card");
+
+function filterCourses() {
+  const level = levelFilter.value;
+  const institute = instituteFilter.value;
+
+  courses.forEach(course => {
+    const matchesLevel = level === "all" || course.dataset.level === level;
+    const matchesInstitute = institute === "all" || course.dataset.institute === institute;
+
+    course.style.display = matchesLevel && matchesInstitute ? "flex" : "none";
+  });
+}
+
+levelFilter.addEventListener("change", filterCourses);
+instituteFilter.addEventListener("change", filterCourses);
+</script>
+
+
 <body>
 
 <header class="site-header">
@@ -39,25 +62,149 @@
     <p>Explore MCAST qualifications and what you need to apply.</p>
 </section>
 
-<section class="courses-section">
-    <div class="course-card">
-        <h3>Level 4 Diploma</h3>
-        <p>Entry level vocational qualifications.</p>
-        <span>Requirement: 2 SEC passes</span>
-    </div>
+ <section class="course-filters">
+  <select id="levelFilter">
+    <option value="all">All Levels</option>
+    <option value="1">Level 1</option>
+    <option value="2">Level 2</option>
+    <option value="3">Level 3</option>
+    <option value="4">Level 4</option>
+    <option value="5">Level 5</option>
+    <option value="6">Level 6</option>
+    <option value="7">Level 7</option>
+  </select>
 
-    <div class="course-card">
-        <h3>Level 6 Advanced Diploma</h3>
-        <p>Prepares students for higher education or industry.</p>
-        <span>Requirement: Level 4 qualification</span>
-    </div>
-
-    <div class="course-card">
-        <h3>Degree Programmes</h3>
-        <p>University-level professional degrees.</p>
-        <span>Requirement: Level 6 qualification</span>
-    </div>
+  <select id="instituteFilter">
+    <option value="all">All Institutes</option>
+    <option value="creative">Institute for the Creative Arts</option>
+    <option value="business">Business & Commerce</option>
+    <option value="engineering">Engineering & Transport</option>
+    <option value="ict">ICT</option>
+    <option value="applied">Applied Sciences</option>
+    <option value="community">Community Services</option>
+    <option value="trades">Institute for the Trades</option>
+    <option value="gozo">Gozo Campus</option>
+    <option value="cle">Centre for Learning & Employability</option>
+    <option value="aric">ARIC</option>
+  </select>
 </section>
+
+<div class="course-card" data-level="4" data-institute="creative">
+  <div class="course-left">
+    <img src="assets/icons/creative.svg" class="course-icon">
+
+    <div>
+      <h3>Advanced Diploma in Digital Design</h3>
+
+      <div class="tags">
+        <span>Institute for the Creative Arts</span>
+        <span>Level 4</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="course-actions">
+    <button class="btn-apply">Apply</button>
+    <button class="btn-light">View Details</button>
+    <button class="btn-light">Entry Requirements</button>
+  </div>
+</div>
+
+<div id="coursesList">
+
+      <!-- Creative Arts -->
+  <div class="course-card" data-level="4" data-institute="creative">
+    <div class="course-left">
+      <img src="assets/icons/creative.svg" class="course-icon">
+
+      <div>
+        <h3>Advanced Diploma in Digital Design</h3>
+        <div class="tags">
+          <span>Institute for the Creative Arts</span>
+          <span>Level 4</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+
+  <!-- ICT -->
+  <div class="course-card" data-level="6" data-institute="ict">
+    <div class="course-left">
+      <img src="assets/icons/ict.svg" class="course-icon">
+
+      <div>
+        <h3>Bachelor of Science in Software Development</h3>
+        <div class="tags">
+          <span>Institute of ICT</span>
+          <span>Level 6</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+
+  <!-- Engineering -->
+  <div class="course-card" data-level="3" data-institute="engineering">
+    <div class="course-left">
+      <img src="assets/icons/engineering.svg" class="course-icon">
+
+      <div>
+        <h3>Diploma in Electrical Installations</h3>
+        <div class="tags">
+          <span>Institute of Engineering & Transport</span>
+          <span>Level 3</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+
+  <!-- Business -->
+  <div class="course-card" data-level="5" data-institute="business">
+    <div class="course-left">
+      <img src="assets/icons/business&commerce.svg" class="course-icon">
+
+      <div>
+        <h3>Higher Diploma in Business Management</h3>
+        <div class="tags">
+          <span>Business & Commerce</span>
+          <span>Level 5</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+
+</div>
+
+ 
+
+
 
 
     
