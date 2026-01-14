@@ -475,4 +475,55 @@ h1, h2, h3, h4, h5, h6 {
   color: #000043;
 }
 
+#coursesList {
+    padding: 1.2rem;
+}
+
+.form-wrapper{
+    max-width: 600px;
+    margin:  0 auto;
+    padding: 1.2rem 0;
+
+    input{
+        padding: 5px;
+    }
+    input[placeholder]{
+        color: red;
+    }
+}
+
+.name-wrapper{
+    width:100%;
+    input{
+        float: left;
+    }
+
+    font-family: var(--font-normal);
+}
+
+.faq{
+    padding: 1.2rem;
+}
+
+.questions{
+    list-style: none;
+
+    li{
+        padding: 1rem 1rem;
+        background-color: var(--primary);
+        color: var(--light);
+    }
+    li:nth-child(even){
+        background-color: var(--muted);
+        color: var(--dark);
+    }
+    li:first-child{
+        border-radius: 8px 8px 0 0;
+    }
+
+     li:last-child{
+        border-radius: 0 0 8px 8px;
+    }
+
+}
 

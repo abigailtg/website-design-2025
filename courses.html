@@ -7,27 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<script>
-const levelFilter = document.getElementById("levelFilter");
-const instituteFilter = document.getElementById("instituteFilter");
-const courses = document.querySelectorAll(".course-card");
-
-function filterCourses() {
-  const level = levelFilter.value;
-  const institute = instituteFilter.value;
-
-  courses.forEach(course => {
-    const matchesLevel = level === "all" || course.dataset.level === level;
-    const matchesInstitute = institute === "all" || course.dataset.institute === institute;
-
-    course.style.display = matchesLevel && matchesInstitute ? "flex" : "none";
-  });
-}
-
-levelFilter.addEventListener("change", filterCourses);
-instituteFilter.addEventListener("change", filterCourses);
-</script>
-
 
 <body>
 
@@ -62,33 +41,12 @@ instituteFilter.addEventListener("change", filterCourses);
     <p>Explore MCAST qualifications and what you need to apply.</p>
 </section>
 
- <section class="course-filters">
-  <select id="levelFilter">
-    <option value="all">All Levels</option>
-    <option value="1">Level 1</option>
-    <option value="2">Level 2</option>
-    <option value="3">Level 3</option>
-    <option value="4">Level 4</option>
-    <option value="5">Level 5</option>
-    <option value="6">Level 6</option>
-    <option value="7">Level 7</option>
-  </select>
 
-  <select id="instituteFilter">
-    <option value="all">All Institutes</option>
-    <option value="creative">Institute for the Creative Arts</option>
-    <option value="business">Business & Commerce</option>
-    <option value="engineering">Engineering & Transport</option>
-    <option value="ict">ICT</option>
-    <option value="applied">Applied Sciences</option>
-    <option value="community">Community Services</option>
-    <option value="trades">Institute for the Trades</option>
-    <option value="gozo">Gozo Campus</option>
-    <option value="cle">Centre for Learning & Employability</option>
-    <option value="aric">ARIC</option>
-  </select>
-</section>
 
+
+<div id="coursesList">
+
+        <!-- Creative Arts -->
 <div class="course-card" data-level="4" data-institute="creative">
   <div class="course-left">
     <img src="assets/icons/creative.svg" class="course-icon">
@@ -109,8 +67,6 @@ instituteFilter.addEventListener("change", filterCourses);
     <button class="btn-light">Entry Requirements</button>
   </div>
 </div>
-
-<div id="coursesList">
 
       <!-- Creative Arts -->
   <div class="course-card" data-level="4" data-institute="creative">
@@ -199,6 +155,131 @@ instituteFilter.addEventListener("change", filterCourses);
     </div>
   </div>
 
+  <!-- Applied Sciences -->
+  <div class="course-card" data-level="2" data-institute="applied-sciences">
+    <div class="course-left">
+      <img src="assets/icons/applied-sciences.svg" class="course-icon">
+
+      <div>
+        <h3>Foundation Certificate in Applied Science</h3>
+        <div class="tags">
+          <span>Insistute of Applied Sciences</span>
+          <span>Level 2</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+  <!-- Community Services -->
+  <div class="course-card" data-level="1" data-institute="community-services">
+    <div class="course-left">
+      <img src="assets/icons/community-services.svg" class="course-icon">
+
+      <div>
+        <h3>Introductory Certificate in Community Care Services</h3>
+        <div class="tags">
+          <span>Institute of Community Services</span>
+          <span>Level 1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+  <!-- Trades -->
+  <div class="course-card" data-level="1" data-institute="trades">
+    <div class="course-left">
+      <img src="assets/icons/trades.svg" class="course-icon">
+
+      <div>
+        <h3>Certificate in Tile-Making and Stone Work</h3>
+        <div class="tags">
+          <span>Institute for the Trades</span>
+          <span>Level 1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+  <!-- Gozo Campus -->
+  <div class="course-card" data-level="4" data-institute="Gozo">
+    <div class="course-left">
+      <img src="assets/icons/gozo-campus.svg" class="course-icon">
+
+      <div>
+        <h3>Advanced Diploma in Accounting</h3>
+        <div class="tags">
+          <span>Gozo Campus</span>
+          <span>Level 4</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+  <!-- CLE -->
+  <div class="course-card" data-level="1" data-institute="cle">
+    <div class="course-left">
+      <img src="assets/icons/cle.svg" class="course-icon">
+
+      <div>
+        <h3>Award in Basic Office Skills</h3>
+        <div class="tags">
+          <span>Centre for Learning and Employability</span>
+          <span>Level 1</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
+
+  <!-- ARIC -->
+  <div class="course-card" data-level="7" data-institute="aric">
+    <div class="course-left">
+      <img src="assets/icons/aric.svg" class="course-icon">
+
+      <div>
+        <h3>Master of Science in Aerospace Engineering</h3>
+        <div class="tags">
+          <span>ARIC</span>
+          <span>Level 7</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-actions">
+      <button class="btn-apply">Apply</button>
+      <button class="btn-light">View Details</button>
+      <button class="btn-light">Entry Requirements</button>
+    </div>
+  </div>
 
 </div>
 
