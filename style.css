@@ -504,6 +504,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 1.2rem;
   margin-bottom: 1rem;
   color: var(--light);
+  box-shadow: var(--shadow-dark);
 }
 
 .course-left {
@@ -538,10 +539,49 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 999px;
   color: var(--light);
   font-weight: 600;
+
+}
+
+.btn-apply:hover {
+  background: var(--secondary-tint);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  color: var(--light);
+  font-weight: 600;
+
+}
+
+.btn-apply:active {
+  background: var(--secondary-shade);
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  color: var(--light);
+  font-weight: 600;
+
 }
 
 .btn-light {
-  background: var(--light);
+  background: var(--muted);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  color: var(--primary);
+  font-family: var(--font-normal);
+}
+
+.btn-light:hover {
+  background: var(--muted-tint);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  color: var(--primary);
+  font-family: var(--font-normal);
+}
+
+.btn-light:active {
+  background: var(--muted-shade);
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 999px;
@@ -566,6 +606,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     font-family: var(--font-normal);
     box-sizing: border-box;
+    
 }
 
 /* NAME + SURNAME ROW */
@@ -754,6 +795,19 @@ textarea::placeholder {
         padding: 2rem;
         margin-bottom: 1rem;
         border-radius: 8px;
+        box-shadow: var(--shadow-dark);
+    }
+
+    a{
+        color: var(--secondary);
+    }
+
+    a:hover{
+        color: var(--secondary-tint);
+    }
+
+    a:active{
+        color: var(--secondary-shade);
     }
 }
 
