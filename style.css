@@ -49,9 +49,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
- .site-header {
+/* ================= HEADER BASE (DESKTOP) ================= */
+
+.site-header {
     background-color: var(--primary);
     padding: 1rem 2rem;
+    position: relative;
+    z-index: 1000;
 }
 
 .header-inner {
@@ -64,8 +68,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Logo */
 .logo img {
-    height: 64px;  
+    height: 64px;
     width: auto;
+}
+
+/* Hide checkbox */
+#menu-checkbox {
+    display: none;
 }
 
 /* Hide hamburger on desktop */
@@ -76,48 +85,15 @@ h1, h2, h3, h4, h5, h6 {
     cursor: pointer;
 }
 
-/* Desktop nav (unchanged) */
+/* Desktop nav */
+.main-nav {
+    display: flex;
+}
+
 .main-nav ul {
     display: flex;
     gap: 2rem;
     list-style: none;
-}
-
-/* MOBILE ONLY */
-@media (max-width: 768px) {
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .main-nav {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--primary);
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        padding: 1rem 2rem;
-        gap: 1rem;
-    }
-
-    /* When checkbox is checked → open menu */
-    #menu-checkbox:checked ~ .main-nav {
-        max-height: 300px;
-    }
-}
-
-
-/* Navigation */
-.main-nav {
-    display: flex;
-    gap: 2rem;
 }
 
 .main-nav a {
@@ -133,11 +109,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .main-nav a:active {
-    text-decoration: underline;
     color: var(--muted-shade);
 }
 
-/* Buttons */
+/* Header buttons */
 .header-actions {
     display: flex;
     gap: 1rem;
@@ -151,28 +126,66 @@ h1, h2, h3, h4, h5, h6 {
     white-space: nowrap;
 }
 
-/* Light button */
 .btn-light {
     background-color: var(--muted);
     color: var(--primary);
 }
 
-.btn-light:hover {
-    background-color: var(--muted-tint);
-    color: var(--primary);
-}
-
-.btn-light:active {
-    background-color: var(--muted-shade);
-    color: var(--primary);
-}
-
-/* Outline button */
 .btn-outline {
     border: 1px solid var(--muted);
     color: var(--muted);
     background: transparent;
 }
+
+
+/* ================= MOBILE HEADER ================= */
+
+@media (max-width: 768px) {
+
+    .header-inner {
+        flex-wrap: wrap;
+    }
+
+    /* Show hamburger */
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    /* Stack nav below header */
+    .main-nav {
+        width: 100%;
+        order: 3;
+        background: var(--primary);
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+
+    .main-nav a {
+        color: var(--light);
+        display: block;
+        padding: 0.5rem 0;
+    }
+
+    /* Hide header buttons on mobile */
+    .header-actions {
+        display: none;
+    }
+
+    /* Checkbox opens menu */
+    #menu-checkbox:checked ~ .main-nav {
+        max-height: 400px;
+    }
+}
+
 
 .btn-outline:hover {
     border: 1px solid var(--muted-tint);
