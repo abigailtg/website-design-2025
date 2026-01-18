@@ -200,12 +200,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero {
-    background-image: url(assets/mcast-my-future.jpg);
+    background-image: url(assets/mcast-my-future.jpg);  
     background-size: cover;
-    background-position: center 35%;
+    background-position: center bottom;
     background-repeat: no-repeat;
 
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 
@@ -217,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
     content: "";
     position: absolute;
     inset: 0;
-    background: var(--dark-fade); /* fallback if variable missing */
+    background: var(--dark-fade);
 }
 
 .hero-content {
@@ -235,9 +235,11 @@ h1, h2, h3, h4, h5, h6 {
 .search-bar {
     display: flex;
     align-items: center;
+
     background: var(--light);
     border-radius: 999px;
     overflow: hidden;
+
     max-width: 480px;
     box-shadow: var(--shadow-dark);
 }
@@ -248,57 +250,33 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem 1.25rem;
     font-size: 1rem;
     font-family: var(--font-normal);
-    min-width: 0;
 }
 
-.search-bar button {
+.search-bar input:focus {
+    outline: none;
+}
+
+.search-bar .button {
     border: none;
     background: transparent;
     padding: 0 1.25rem;
+    font-size: 1.2rem;
     cursor: pointer;
+    color: var(--primary);
 }
-
-.search-bar button img {
+.search-bar .button img {
     width: 1.5rem;
     height: 1.5rem;
 }
 
-
-/* ================= MOBILE HERO ================= */
-
 @media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
 
     .hero {
-        padding: 2.5rem 1rem;
-        align-items: flex-end;
-        background-position: center 20%;
-        min-height: 55vh;
+        padding: 3rem 1.5rem;
     }
-
-    .hero-content {
-        max-width: 100%;
-        margin-bottom: 2.5rem;
-    }
-
-    .hero h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .search-bar {
-        max-width: 100%;
-        width: 100%;
-        border-radius: 40px;
-
-    .search-bar input {
-        padding: 0.9rem 1rem;
-        font-size: 0.95rem;
-    }
-
-    .search-bar button {
-        padding: 0 1rem;
-    }
-  }
 }
 
 .quick-links {
