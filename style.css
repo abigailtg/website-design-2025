@@ -651,6 +651,56 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.2rem;
 }
 
+/* MOBILE COURSE CARDS */
+@media (max-width: 768px) {
+
+  .course-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .course-left {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .course-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .course-left h3 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  .tags {
+    margin-top: 0.3rem;
+  }
+
+  .tags span {
+    display: inline-block;
+    margin-bottom: 0.4rem;
+  }
+
+  .course-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .course-actions button {
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
+  }
+
+}
+
+
 .form-wrapper { 
     max-width: 400px;
     margin: 0 auto;
