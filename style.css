@@ -34,7 +34,6 @@
 
 *{
     box-sizing:border-box;
-    /* will force elements to scale from the border instead */
     margin: 0;
     padding: 0;
 }
@@ -68,6 +67,52 @@ h1, h2, h3, h4, h5, h6 {
     height: 64px;  
     width: auto;
 }
+
+/* Hide hamburger on desktop */
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    color: var(--light);
+    cursor: pointer;
+}
+
+/* Desktop nav (unchanged) */
+.main-nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        gap: 1rem;
+    }
+
+    /* When checkbox is checked → open menu */
+    #menu-checkbox:checked ~ .main-nav {
+        max-height: 300px;
+    }
+}
+
 
 /* Navigation */
 .main-nav {
