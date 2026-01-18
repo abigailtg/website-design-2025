@@ -202,10 +202,10 @@ h1, h2, h3, h4, h5, h6 {
 .hero {
     background-image: url(assets/mcast-my-future.jpg);
     background-size: cover;
-    background-position: center bottom;
+    background-position: center 35%;
     background-repeat: no-repeat;
 
-    min-height: 100vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
 
@@ -270,12 +270,14 @@ h1, h2, h3, h4, h5, h6 {
 
     .hero {
         padding: 2.5rem 1rem;
-        align-items: flex-end; 
-        background-position: center;
+        align-items: flex-end;
+        background-position: center 20%;
+        min-height: 55vh;
     }
 
     .hero-content {
         max-width: 100%;
+        margin-bottom: 2.5rem;
     }
 
     .hero h1 {
@@ -287,7 +289,6 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 100%;
         width: 100%;
         border-radius: 40px;
-    }
 
     .search-bar input {
         padding: 0.9rem 1rem;
@@ -297,8 +298,8 @@ h1, h2, h3, h4, h5, h6 {
     .search-bar button {
         padding: 0 1rem;
     }
+  }
 }
-
 
 .quick-links {
     padding: 4rem 2.5rem;
